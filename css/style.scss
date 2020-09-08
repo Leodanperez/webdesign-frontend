@@ -4,7 +4,85 @@ $button-color: #009BF9;
 $text-color: #F1FAFF;
 $white-color: #fff;
 
-.dark{
-  background-color: $primary-color;
+//Configuracion del navegador
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+}
+.navbar{
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  padding: 30px 0;
+  top: 0;
+  z-index: 999;
+  transition: .3s linear;  
+}
+.inner-width{
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 40px;
+}
+.navbar .inner-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  width: 40px;
+  height: 30px;
+  background-image: url(../img/white-logo.png);
+  background-size: contain;
+}
+.navbar-menu a{
   color: $white-color;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: .2s linear;
+}
+.navbar-menu a:hover{
+  color: $button-color !important;
+}
+
+//Home
+#home{
+  height: 100vh;
+  min-height: 500px;
+  background: url(../img/bg.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#home .inner-width{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+#home .content{
+  width: 100%;
+  color: $white-color;
+}
+#home .content h1{
+  font-size: 60px;
+  margin-bottom: 60px;
+}
+#home .content h1::after{
+  content: "Leodan";
+  animation: animacion 10s linear infinite;
+}
+@keyframes animacion {
+  25%{
+    content: "A Developer";
+  }
+  50%{
+    content: "A Designer";
+  }
+  75%{
+    content: "A Youtuber";
+  }
 }
