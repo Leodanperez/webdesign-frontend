@@ -1,7 +1,7 @@
 $primary-color: #15202B;
-$secondary-color: #173750;
+$secondary-color: #1a2734;
 $button-color: #009BF9;
-$text-color: #F1FAFF;
+$text-color: #6ec1e4;
 $white-color: #fff;
 
 //Configuracion del navegador
@@ -37,6 +37,24 @@ $white-color: #fff;
   background-image: url(../img/white-logo.png);
   background-size: contain;
 }
+.menu-toggler{
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 999;
+  display: none;
+  span{
+    display: block;
+    height: 3px;
+    background-color: $white-color;
+    margin: 6px 0;
+    position: relative;
+    transition: .3s linear;
+  }
+}
 .navbar-menu a{
   color: $white-color;
   font-size: 15px;
@@ -46,6 +64,20 @@ $white-color: #fff;
 }
 .navbar-menu a:hover{
   color: $button-color !important;
+}
+.sticky{
+  background-color: red;
+  padding: 18px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+.sticky .logo{
+  background-image: url(../img/black-logo.png);
+}
+.sticky .navbar-menu a{
+  color: #000;
+}
+.sticky .menu-toggler span{
+  background-color: $white-color;;
 }
 
 //Home
@@ -85,4 +117,36 @@ $white-color: #fff;
   75%{
     content: "A Youtuber";
   }
+}
+
+.sm a {
+  color: $white-color;
+  font-size: 22px;
+  margin: 0 10px;
+  transition: .2s linear;
+
+  &:hover{
+    color: $button-color;
+  }
+}
+#home .buttons{
+  margin-top: 60px;
+  a{
+    display: inline-block;
+    margin: 15px 30px;
+    color: $button-color;
+    font-size: 15px;
+    font-weight: 500;
+    width: 180px;
+    border: 1px solid $button-color;
+    padding: 14px 0;
+    border-radius: 6px;
+    transition: .2s linear;
+  }
+}
+#home .buttons a:hover,
+#home .buttons a:nth-child(2)
+{
+  background-color: $button-color;
+  color: $white-color;
 }
