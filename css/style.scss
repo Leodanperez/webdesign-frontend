@@ -150,3 +150,113 @@ $white-color: #fff;
   background-color: $button-color;
   color: $white-color;
 }
+
+/*=====================================================
+acerca de
+=======================================================*/
+section{
+  padding: 100px 0;
+  background-color: #fff;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  font-size: 26px;
+  padding-bottom: 20px;
+  color: #15202B;
+}
+.section-title::before{
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: $button-color;
+  bottom: 0;
+  left: calc(50% - 40px);
+}
+.section-title::after{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 10px;
+  background-color: $button-color;
+  border: 4px solid $primary-color;
+  left: calc(50% - 12px);
+  bottom: -7px;
+}
+.about-content{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about-pic {
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 100px;
+}
+.about-text{
+  flex: 1;
+  h2 {
+    color: #000;
+  }
+  h3{
+    margin: 10px 0;
+    color: #808080;
+    font-size: 16px;
+  }
+}
+.about-text h3 span:nth-child(1):after,
+.about-text h3 span:nth-child(2):after{
+  content: "";
+  height: 6px;
+  width: 6px;
+  background-color: #808080;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 14px;
+}
+.about-text p{
+  font-size: 17px;
+  text-align: justify;
+  line-height: 26px;
+  margin-top: 20px;
+  color: #697477;
+}
+.skills{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.skill{
+  width: calc(50% - 20px);
+  margin: 15px 0;
+}
+.skill-info{
+  display: flex;
+  justify-content: space-between;
+  span{
+    color: #000;
+  }
+}
+.skill-bar{
+  height: 6px;
+  background-color: #ddd;
+  margin-top: 14px;
+  position: relative;
+  border-radius: 4px;
+
+  &::after{
+    content: "";
+    position: absolute;
+    height: 6px;
+    background-color: $button-color;
+    bottom: 0;
+    border-radius: 4px;
+  }
+}
+
+.html:after{
+  width: 90%;
+}
