@@ -4,6 +4,12 @@ $button-color: #009BF9;
 $text-color: #6ec1e4;
 $white-color: #fff;
 
+//Variables del color light
+$color-light-header: #fff;
+$color-light-primary: #f5f5f5;
+$color-light-black: #000;
+$color-light-text: #2a3b47;
+
 //Configuracion del navegador
 *{
   margin: 0;
@@ -66,7 +72,7 @@ $white-color: #fff;
   color: $button-color !important;
 }
 .sticky{
-  background-color: red;
+  background-color: $color-light-header;
   padding: 18px 0;
   box-shadow: 0 2px 4px rgba(0,0,0,.2);
 }
@@ -78,6 +84,46 @@ $white-color: #fff;
 }
 .sticky .menu-toggler span{
   background-color: $white-color;;
+}
+
+.switch{
+  background-color: #343d5b;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  &::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+  }
+  &.active{
+    background: orange;
+    color: #000;
+    &::after{
+      right: 0;
+      left: unset;
+    }
+  }
+  span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+  }
 }
 
 //Home
@@ -259,4 +305,126 @@ section{
 
 .html:after{
   width: 90%;
+}
+
+//=================== SERVICIOS =============
+section.dark {
+  color: $color-light-text;
+}
+.services{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.service{
+  width: calc(33% - 20px);
+  text-align: center;
+  border: 1px solid $color-light-header;
+  background: $color-light-header;
+  box-shadow: 0px 0px 10px 1px rgba(228,228, 228, 0.75);
+  border-radius: 6px;
+  margin: 20px 0;
+  padding: 40px 20px;
+  color: $color-light-black;
+  cursor: pointer;
+  transition: .3s linear;
+  .icon{
+    color: $button-color;
+    font-size: 40px;
+    margin-bottom: 20px;
+    transition: .3s linear;    
+  }
+  h4{
+    font-size: 16px;
+    margin-bottom: 6px;
+    &:hover{
+      color: $white-color;
+    }
+  }
+  p{
+    color: #697477;
+  }
+  &:hover{
+    background-color: $button-color;   
+  }
+}
+.service:hover .icon{
+  color: $white-color;
+}
+
+/*===================== TIME LINE ===================*/
+.time-line{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.block{
+  width: calc(50% - 20px);
+  background-color: $color-light-header;
+  border: 1px solid $color-light-header;
+  border-radius: 15px;
+  margin: 10px 0;
+  padding: 30px;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 120%;
+    background-color: $color-light-black;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: $color-light-text;
+    left: -28px;
+    top: 30px;
+    border-radius: 50%;
+  }
+}
+.block h3 {
+  color: #2a3b47;
+  font-size: 16px;
+  margin: 10px 0;
+}
+.block h4{
+  color: $button-color;
+}
+.block p{
+  font-size: 15px;
+  color: #697477;
+}
+
+//==================== IMAGENES GALLERYS =============
+.work{
+  width: calc(33% - 10px);
+  overflow: hidden;
+  border-radius: 6px;
+  margin: 10px 0;
+  cursor: pointer;
+  position: relative;
+}
+.work img {
+  width: 100%;
+  height: 100%;
+  transition: .4s linear;
+}
+.work::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #48dbfbcc;
+  transition: .2s linear;
+  opacity: 0;
+  transform: scale(0);
+}
+.work:hover{
+  transform: scale(1.6) rotate(25deg);
 }
