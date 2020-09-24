@@ -6,4 +6,15 @@ $(document).ready(function() {
       $(".navbar").removeClass("sticky");
     }
   })
-})
+
+  //plugin magnific popup
+  $('.works').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery:{
+      enabled:true,
+      preload: [0,2]
+    }
+  });
+
+});
