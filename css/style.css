@@ -84,12 +84,26 @@
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+body.dark .sticky {
+  background-color: #1a2734;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
 .sticky .logo {
   background-image: url(../img/black-logo.png);
 }
 
+body.dark .sticky .logo {
+  background-image: url(../img/white-logo.png);
+}
+
 .sticky .navbar-menu a {
   color: #000;
+}
+
+body.dark .sticky .navbar-menu a {
+  color: #fff;
 }
 
 .sticky .menu-toggler span {
@@ -142,6 +156,17 @@
   display: block;
   background: none;
   color: #fff;
+}
+
+/*Cambiar de color*/
+body {
+  background: #15202B;
+}
+
+body.dark {
+  background: #15202B;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
 
 #home {
@@ -250,6 +275,12 @@ section {
   background-color: #f5f5f5;
 }
 
+body.dark section {
+  background-color: #15202B;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
 .section-title {
   text-align: center;
   margin-bottom: 80px;
@@ -257,6 +288,10 @@ section {
   font-size: 26px;
   padding-bottom: 20px;
   color: #15202B;
+}
+
+body.dark .section-title {
+  color: #fff;
 }
 
 .section-title::before {
@@ -278,6 +313,10 @@ section {
   border: 4px solid #15202B;
   left: calc(50% - 12px);
   bottom: -7px;
+}
+
+body.dark .section-title::after {
+  border: 4px solid #fff;
 }
 
 .about-content {
@@ -307,10 +346,18 @@ section {
   color: #000;
 }
 
+body.dark .about-text h2 {
+  color: #009BF9;
+}
+
 .about-text h3 {
   margin: 10px 0;
   color: #808080;
   font-size: 16px;
+}
+
+body.dark .about-text h3 {
+  color: #6ec1e4;
 }
 
 .about-text h3 span:nth-child(1):after,
@@ -324,12 +371,21 @@ section {
   margin: 0 14px;
 }
 
+body.dark .about-text h3 span:nth-child(1):after, body.dark
+.about-text h3 span:nth-child(2):after {
+  background-color: #6ec1e4;
+}
+
 .about-text p {
   font-size: 17px;
   text-align: justify;
   line-height: 26px;
   margin-top: 20px;
   color: #697477;
+}
+
+body.dark .about-text p {
+  color: #fff;
 }
 
 .skills {
@@ -360,6 +416,10 @@ section {
 
 .skill-info span {
   color: #000;
+}
+
+body.dark .skill-info span {
+  color: #fff;
 }
 
 .skill-bar {
@@ -412,6 +472,16 @@ section.dark {
   cursor: pointer;
   -webkit-transition: .3s linear;
   transition: .3s linear;
+}
+
+body.dark .service {
+  border: 1px solid #009BF9;
+  background: #15202B;
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(26, 39, 52, 0.75);
+          box-shadow: 0px 0px 10px 1px rgba(26, 39, 52, 0.75);
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
 
 .service .icon {
@@ -724,6 +794,50 @@ footer {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
     bottom: 14px;
+  }
+  .inner-width {
+    max-width: 800px;
+  }
+  .about-pic {
+    margin: 0 auto 60px;
+  }
+  .about-text {
+    text-align: center;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+  .service {
+    width: calc(50% - 20px);
+  }
+  .block {
+    width: calc(100% - 20px);
+    margin-left: auto;
+  }
+  .work {
+    width: calc(50% - 10px);
+  }
+  .contact-info .item {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inner-width {
+    padding: 0 20px;
+  }
+  .skill {
+    width: 100%;
+  }
+  .service {
+    width: 100%;
+  }
+  .work {
+    width: 100%;
+  }
+  .nameZone, .emailZone {
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

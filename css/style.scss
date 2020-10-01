@@ -75,15 +75,26 @@ $color-light-text: #2a3b47;
   background-color: $color-light-header;
   padding: 18px 0;
   box-shadow: 0 2px 4px rgba(0,0,0,.2);
+
+  body.dark & {
+    background-color: $secondary-color;
+    transition: .3s ease all;
+  }
 }
 .sticky .logo{
   background-image: url(../img/black-logo.png);
+  body.dark & {
+    background-image: url(../img/white-logo.png);
+  }
 }
 .sticky .navbar-menu a{
   color: #000;
+  body.dark & {
+    color: $white-color;
+  }
 }
 .sticky .menu-toggler span{
-  background-color: $white-color;;
+  background-color: $white-color;
 }
 
 .switch{
@@ -123,6 +134,15 @@ $color-light-text: #2a3b47;
     display: block;
     background: none;
     color: #fff;
+  }
+}
+
+/*Cambiar de color*/
+body{
+  background: $primary-color;
+  &.dark{
+    background: $primary-color;
+    transition: .3s ease all;
   }
 }
 
@@ -203,6 +223,10 @@ acerca de
 section{
   padding: 100px 0;
   background-color: #f5f5f5;
+  body.dark & {
+    background-color: $primary-color;
+    transition: .3s ease all;
+  }
 }
 .section-title {
   text-align: center;
@@ -211,6 +235,9 @@ section{
   font-size: 26px;
   padding-bottom: 20px;
   color: #15202B;
+  body.dark & {
+    color: $white-color;
+  }
 }
 .section-title::before{
   content: "";
@@ -228,6 +255,9 @@ section{
   height: 10px;
   background-color: $button-color;
   border: 4px solid $primary-color;
+  body.dark & {
+    border: 4px solid $white-color;
+  }
   left: calc(50% - 12px);
   bottom: -7px;
 }
@@ -245,10 +275,16 @@ section{
   flex: 1;
   h2 {
     color: #000;
+    body.dark & {
+      color: $button-color;
+    }
   }
   h3{
     margin: 10px 0;
     color: #808080;
+    body.dark & {
+      color: $text-color;
+    }
     font-size: 16px;
   }
 }
@@ -258,6 +294,9 @@ section{
   height: 6px;
   width: 6px;
   background-color: #808080;
+  body.dark & {
+    background-color: $text-color;
+  }
   display: inline-block;
   border-radius: 50%;
   margin: 0 14px;
@@ -268,6 +307,9 @@ section{
   line-height: 26px;
   margin-top: 20px;
   color: #697477;
+  body.dark & {
+    color: $white-color;
+  }
 }
 .skills{
   margin-top: 40px;
@@ -284,6 +326,9 @@ section{
   justify-content: space-between;
   span{
     color: #000;
+    body.dark & {
+      color: $white-color;
+    }
   }
 }
 .skill-bar{
@@ -328,6 +373,13 @@ section.dark {
   color: $color-light-black;
   cursor: pointer;
   transition: .3s linear;
+  body.dark & {
+    border: 1px solid $button-color;
+    background: $primary-color;
+    color: $white-color;    
+    box-shadow: 0px 0px 10px 1px rgba(26, 39, 52, 0.75);
+    transition: .3s ease all;
+  }
   .icon{
     color: $button-color;
     font-size: 40px;
@@ -584,5 +636,47 @@ footer{
   .menu-toggler.active span:nth-child(3){
     transform: rotate(45deg);
     bottom: 14px;
+  }
+  .inner-width{
+    max-width: 800px;
+  }
+  .about-pic{
+    margin: 0 auto 60px;
+  }
+  .about-text{
+    text-align: center;
+    flex: 100%;
+  }
+  .service{
+    width: calc(50% - 20px);
+  }
+  .block{
+    width: calc(100% - 20px);
+    margin-left: auto;
+  }
+  .work{
+    width: calc(50% - 10px);
+  }
+  .contact-info .item{
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inner-width{
+    padding: 0 20px;
+  }
+  .skill{
+    width: 100%;
+  }
+  .service{
+    width: 100%
+  }
+  .work{
+    width: 100%
+  }
+  .nameZone, .emailZone{
+    max-width: 100%;
   }
 }
