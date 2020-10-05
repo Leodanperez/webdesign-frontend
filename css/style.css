@@ -1,3 +1,33 @@
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #838383;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -505,7 +535,15 @@ body.dark .service {
   color: #697477;
 }
 
+body.dark .service p {
+  color: #fff;
+}
+
 .service:hover {
+  background-color: #009BF9;
+}
+
+body.dark .service:hover {
   background-color: #009BF9;
 }
 
@@ -535,6 +573,11 @@ body.dark .service {
   position: relative;
 }
 
+body.dark .block {
+  background-color: #1a2734;
+  border: 1px solid #1a2734;
+}
+
 .block::before {
   content: "";
   position: absolute;
@@ -545,6 +588,10 @@ body.dark .service {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+body.dark .block::before {
+  background-color: #fff;
 }
 
 .block::after {
@@ -558,10 +605,18 @@ body.dark .service {
   border-radius: 50%;
 }
 
+body.dark .block::after {
+  background-color: #009BF9;
+}
+
 .block h3 {
   color: #2a3b47;
   font-size: 16px;
   margin: 10px 0;
+}
+
+body.dark .block h3 {
+  color: #fff;
 }
 
 .block h4 {
@@ -571,6 +626,10 @@ body.dark .service {
 .block p {
   font-size: 15px;
   color: #697477;
+}
+
+body.dark .block p {
+  color: #7a949b;
 }
 
 .work {
@@ -655,9 +714,20 @@ body.dark .service {
           box-shadow: 0px 0px 5px 5px rgba(230, 229, 229, 0.8);
 }
 
+body.dark .contact-info .item {
+  background-color: #1a2734;
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(26, 39, 52, 0.1);
+          box-shadow: 0px 0px 1px 1px rgba(26, 39, 52, 0.1);
+}
+
 .contact-info .item:hover {
   background-color: #009BF9;
   color: #fff;
+}
+
+body.dark .contact-info .item:hover {
+  color: #009BF9;
 }
 
 .contact-info i {
@@ -691,6 +761,12 @@ body.dark .service {
   border: 1px solid #cfcfd1;
 }
 
+body.dark .contact-form input, body.dark .contact-form textarea {
+  background-color: #1a2734;
+  color: #fff;
+  border: 1px solid #1a2734;
+}
+
 .contact-form .btn {
   width: 180px;
   background-color: transparent;
@@ -702,6 +778,10 @@ body.dark .service {
   cursor: pointer;
   -webkit-transition: .3s linear;
   transition: .3s linear;
+}
+
+body.dark .contact-form .btn {
+  border: 1px solid #009BF9;
 }
 
 .contact-form .btn:hover {

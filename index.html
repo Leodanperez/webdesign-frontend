@@ -9,10 +9,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <!-- Librerias JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="js/WOW.js"></script>
 </head>
 <body>
   <!-- Menu de navegacion -->
@@ -25,12 +27,12 @@
         <span></span>
       </button>
       <div class="navbar-menu">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Education</a>
-        <a href="#">Work</a>
-        <a href="#">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#education">Education</a>
+        <a href="#works">Work</a>
+        <a href="#contact">Contact</a>
       </div>
       <button class="switch" id="switch">
         <span>
@@ -63,13 +65,13 @@
     </div>
   </section>
 
-  <section>
+  <section id="about">
     <div class="inner-width">
-      <h2 class="section-title">Acerca de</h2>
+      <h2 class="section-title animate__animated animate__bounce">Acerca de</h2>
       <div class="about-content">
         <img src="img/pic.png" class="about-pic">
         <div class="about-text">
-          <h2>Hola soy desarrollador web</h2>
+          <h2 class="animate__heartBeat">Hola soy desarrollador web</h2>
           <h3>
             <span>Developer</span>
             <span>Designer</span>
@@ -329,7 +331,9 @@
   </footer>
 
   <button class="goTop fas fa-arrow-up"></button>
-
+  <script>
+    new WOW().init();
+  </script>
   <script src="js/main.js"></script>
   <script src="js/query.js"></script>
 </body>

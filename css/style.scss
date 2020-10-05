@@ -10,6 +10,31 @@ $color-light-primary: #f5f5f5;
 $color-light-black: #000;
 $color-light-text: #2a3b47;
 
+//Scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(131, 131, 131);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0,0,0,.2);
+}
+::-webkit-scrollbar-thumb:active{
+  background-color: #999999;
+}
+::-webkit-scrollbar-track{
+  background: #fff;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active{
+  background: #fff;
+}
+
 //Configuracion del navegador
 *{
   margin: 0;
@@ -395,9 +420,15 @@ section.dark {
   }
   p{
     color: #697477;
+    body.dark & {
+      color: $white-color;
+    }
   }
   &:hover{
-    background-color: $button-color;   
+    background-color: $button-color; 
+    body.dark & {
+      background-color: $button-color;
+    }  
   }
 }
 .service:hover .icon{
@@ -412,12 +443,16 @@ section.dark {
 }
 .block{
   width: calc(50% - 20px);
-  background-color: #fff;
+  background-color: $white-color;
   border: 1px solid $color-light-header;
   border-radius: 15px;
   margin: 10px 0;
   padding: 30px;
   position: relative;
+  body.dark & {
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color;
+  }
   &::before{
     content: "";
     position: absolute;
@@ -427,6 +462,9 @@ section.dark {
     left: -20px;
     top: 50%;
     transform: translateY(-50%);
+    body.dark & {
+      background-color: $white-color;
+    }
   }
   &::after{
     content: "";
@@ -437,12 +475,18 @@ section.dark {
     left: -28px;
     top: 30px;
     border-radius: 50%;
+    body.dark & {
+      background-color: $button-color;
+    }
   }
 }
 .block h3 {
   color: #2a3b47;
   font-size: 16px;
   margin: 10px 0;
+  body.dark & {
+    color: $white-color;
+  }
 }
 .block h4{
   color: $button-color;
@@ -450,6 +494,9 @@ section.dark {
 .block p{
   font-size: 15px;
   color: #697477;
+  body.dark & {
+    color: #7a949b;
+  }
 }
 
 //==================== IMAGENES GALLERYS =============
@@ -513,9 +560,17 @@ section.dark {
   cursor: pointer;
   transition: .3s linear;
   box-shadow: 0px 0px 5px 5px rgba(230,229,229,0.8);
+  body.dark & {
+    background-color: $secondary-color;
+    color: $white-color;
+    box-shadow: 0px 0px 1px 1px rgba(26,39,52,0.1);
+  }
   &:hover{
     background-color: $button-color;
     color: $white-color;
+    body.dark & {
+      color: $button-color;
+    }
   }
 }
 .contact-info i {
@@ -533,6 +588,11 @@ section.dark {
     height: 50px;
     margin: 10px 0;
     background-color: $color-light-header;
+    body.dark & {
+      background-color: $secondary-color;
+      color: $white-color;
+      border: 1px solid $secondary-color;    
+    }
     border: none;
     outline: none;
     padding: 20px;
@@ -546,6 +606,9 @@ section.dark {
     color: $color-light-text;
     font-size: 16px;
     border: 1px solid $button-color;
+    body.dark & {
+      border: 1px solid $button-color;
+    }
     padding: 0;
     margin-left: auto;
     cursor: pointer;
